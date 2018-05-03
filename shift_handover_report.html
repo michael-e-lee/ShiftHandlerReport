@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shift Handover Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script> 
+  <style>  
+
+    #icons { 
+      margin-top: 30px;
+    }
+
+    h1 { 
+      font-weight: bold; 
+      margin-top: 30px;  
+      margin-bottom: 0px;
+    } 
+
+    h4 { 
+      margin-top: 5px;
+      margin-bottom: 50px;
+    }
+
+    #shiftHandoverComment {
+      height: 170px;
+    } 
+
+  </style>
+</head>
+<body>
+
+<div class="container"> 
+
+  <div class="row">  
+    <img src="icons.JPG" id="icons">
+    <h1>Shift Handover Report</h1>   
+    <h4><i>Accenture demo customized for Husky Energy's Liwan team</h4>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"> 
+      <form onsubmit="onSubmitMetric()"> 
+        <div class="form-group"> 
+          <label for="metricDatePicker">Date:</label>
+          <input type="date" id="metricDatePicker">
+        </div>
+        <div class="form-group">
+          <label for="metrics">Metric:</label>
+          <select class="form-control" id="metrics">
+            <option selected disabled>Choose a metric</option>
+            <option>KF%</option>
+            <option>TPH PPM</option>
+            <option>PH</option>
+            <option>Turbidty (NTU)</option> 
+            <option>Particle Count</option> 
+            <option>Calcium</option> 
+            <option>Conductivity</option> 
+            <option>Chloride</option> 
+            <option>TSS</option> 
+            <option>Alkalinity</option>
+          </select>
+        </div> 
+        <div class="form-group">
+          <label for="metricComment">Metric Comment:</label>
+            <textarea class="form-control" rows="5" id="metricComment"></textarea>
+        </div> 
+        <div style="text-align:center;">
+          <button type="submit" class="btn btn-default">Submit Metric Feedback</button> 
+        </div>
+      </form> 
+    </div>
+    
+    <div class="col-sm-6"> 
+      <form onsubmit="onSubmitHandover()"> 
+        <div class="form-group"> 
+          <label for="shiftDatePicker">Date:</label>
+          <input type="date" id="shiftDatePicker">
+        </div>
+        <div class="form-group">
+          <label for="shiftHandoverComment">Shift Handover Comment:</label>
+            <textarea class="form-control" id="shiftHandoverComment"></textarea>
+        </div> 
+        <div style="text-align:center;">
+          <button type="submit" class="btn btn-default">Submit Shift Handover Report</button> 
+        </div>
+      </form> 
+    </div>
+  </div> 
+
+</body> 
+</html>
